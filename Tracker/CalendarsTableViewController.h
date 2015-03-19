@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CalendarsTableViewController.h
 //  Tracker
 //
 //  Created by Steve Spencer on 3/18/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CalendarsTableViewController : UITableViewController
 
 @end
-
