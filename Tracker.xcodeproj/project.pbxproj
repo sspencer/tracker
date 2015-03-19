@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA2145E81ABA4FD900592B22 /* CalendarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2145E71ABA4FD900592B22 /* CalendarsTableViewController.m */; };
 		AA2145EA1ABA573D00592B22 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AA2145E91ABA573D00592B22 /* Podfile */; };
+		AA3AE0DA1ABAA9F90028855F /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3AE0D91ABAA9F90028855F /* CalendarView.m */; };
+		AA3AE0DE1ABAB5740028855F /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3AE0DD1ABAB5740028855F /* CalendarViewController.m */; };
 		AA96757F1ABA74CF00533347 /* Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA96757E1ABA74CF00533347 /* Tracker.m */; };
 		AAD893361ABA49E30098A98A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD893351ABA49E30098A98A /* main.m */; };
 		AAD893391ABA49E30098A98A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD893381ABA49E30098A98A /* AppDelegate.m */; };
@@ -38,6 +40,10 @@
 		AA2145E61ABA4FD900592B22 /* CalendarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarsTableViewController.h; sourceTree = "<group>"; };
 		AA2145E71ABA4FD900592B22 /* CalendarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarsTableViewController.m; sourceTree = "<group>"; };
 		AA2145E91ABA573D00592B22 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		AA3AE0D81ABAA9F90028855F /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		AA3AE0D91ABAA9F90028855F /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		AA3AE0DC1ABAB5740028855F /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		AA3AE0DD1ABAB5740028855F /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		AA96757D1ABA74CF00533347 /* Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
 		AA96757E1ABA74CF00533347 /* Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tracker.m; sourceTree = "<group>"; };
 		AAD893301ABA49E30098A98A /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,13 +100,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AAD6C0A31ABA89B800ADAD44 /* UI */ = {
+		AA3AE0DB1ABAAC6F0028855F /* Calendar View */ = {
+			isa = PBXGroup;
+			children = (
+				AA3AE0D81ABAA9F90028855F /* CalendarView.h */,
+				AA3AE0D91ABAA9F90028855F /* CalendarView.m */,
+			);
+			name = "Calendar View";
+			sourceTree = "<group>";
+		};
+		AAD6C0A31ABA89B800ADAD44 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				AA2145E61ABA4FD900592B22 /* CalendarsTableViewController.h */,
 				AA2145E71ABA4FD900592B22 /* CalendarsTableViewController.m */,
+				AA3AE0DC1ABAB5740028855F /* CalendarViewController.h */,
+				AA3AE0DD1ABAB5740028855F /* CalendarViewController.m */,
 			);
-			name = UI;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		AAD893271ABA49E30098A98A = {
@@ -130,9 +147,10 @@
 				AAD893381ABA49E30098A98A /* AppDelegate.m */,
 				AAD8933D1ABA49E30098A98A /* Main.storyboard */,
 				AAFA773D1ABA88BF00E79DF4 /* Models */,
-				AAD6C0A31ABA89B800ADAD44 /* UI */,
+				AAD6C0A31ABA89B800ADAD44 /* Controllers */,
 				AA96757D1ABA74CF00533347 /* Tracker.h */,
 				AA96757E1ABA74CF00533347 /* Tracker.m */,
+				AA3AE0DB1ABAAC6F0028855F /* Calendar View */,
 				AAD893401ABA49E30098A98A /* Images.xcassets */,
 				AAD893421ABA49E30098A98A /* LaunchScreen.xib */,
 				AAD893331ABA49E30098A98A /* Supporting Files */,
@@ -316,8 +334,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAFA773C1ABA885D00E79DF4 /* Entry.m in Sources */,
+				AA3AE0DA1ABAA9F90028855F /* CalendarView.m in Sources */,
 				AAD893391ABA49E30098A98A /* AppDelegate.m in Sources */,
 				AA96757F1ABA74CF00533347 /* Tracker.m in Sources */,
+				AA3AE0DE1ABAB5740028855F /* CalendarViewController.m in Sources */,
 				AAFA77391ABA87B000E79DF4 /* Calendar.m in Sources */,
 				AA2145E81ABA4FD900592B22 /* CalendarsTableViewController.m in Sources */,
 				AAD893361ABA49E30098A98A /* main.m in Sources */,

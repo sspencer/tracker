@@ -111,6 +111,10 @@
 }
 */
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"calendar" sender:nil];
+}
+
 /*
 #pragma mark - Navigation
 

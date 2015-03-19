@@ -17,7 +17,7 @@ Save data via apple cloud??  Go/Redis API??  Keep it local with [Realm](http://r
 
 ## Potential 3rd Party Libraries
 
-* calendar - [JTCalendar](https://github.com/jonathantribouharet/JTCalendar)
+* calendar - [CustomCalendar](https://github.com/micazeve/CustomCalendar)
 * data store - [Realm](https://github.com/realm/realm-cocoa)
 * musical notes - [SoundBankPlayer](https://github.com/hollance/SoundBankPlayer)
 
