@@ -14,6 +14,7 @@
 		AAD893411ABA49E30098A98A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD893401ABA49E30098A98A /* Images.xcassets */; };
 		AAD893441ABA49E30098A98A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAD893421ABA49E30098A98A /* LaunchScreen.xib */; };
 		AAD893501ABA49E30098A98A /* TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD8934F1ABA49E30098A98A /* TrackerTests.m */; };
+		AAE2DB0D1ABA4BD500A75FA8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AAE2DB0C1ABA4BD500A75FA8 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		AAD893491ABA49E30098A98A /* TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD8934E1ABA49E30098A98A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD8934F1ABA49E30098A98A /* TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerTests.m; sourceTree = "<group>"; };
+		AAE2DB0C1ABA4BD500A75FA8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		AAD893331ABA49E30098A98A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AAE2DB0C1ABA4BD500A75FA8 /* README.md */,
 				AAD893341ABA49E30098A98A /* Info.plist */,
 				AAD893351ABA49E30098A98A /* main.m */,
 			);
@@ -221,6 +224,7 @@
 			files = (
 				AAD8933C1ABA49E30098A98A /* ViewController.m in Sources */,
 				AAD893391ABA49E30098A98A /* AppDelegate.m in Sources */,
+				AAE2DB0D1ABA4BD500A75FA8 /* README.md in Sources */,
 				AAD893361ABA49E30098A98A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +416,7 @@
 				AAD893551ABA49E30098A98A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAD893561ABA49E30098A98A /* Build configuration list for PBXNativeTarget "TrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				AAD893581ABA49E30098A98A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
