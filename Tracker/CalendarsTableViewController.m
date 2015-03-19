@@ -7,9 +7,13 @@
 //
 
 #import "CalendarsTableViewController.h"
+#import <Realm/Realm.h>
+#import <EXTScope.h>
+#import "Calendar.h"
+#import "Tracker.h"
 
 @interface CalendarsTableViewController ()
-
+@property (nonatomic, strong) RLMResults *calendars;
 @end
 
 @implementation CalendarsTableViewController
@@ -22,6 +26,28 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    /*
+    // Create object
+    Calendar *c1 = [[Calendar alloc] init];
+    c1.name    = @"Walk Mason";
+
+    Calendar *c2 = [[Calendar alloc] init];
+    c2.name    = @"Walk Ringo";
+
+    // Get the default Realm
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    // You only need to do this once (per thread)
+
+    // Add to Realm with transaction
+    [realm beginWriteTransaction];
+    [realm addObject:c1];
+    [realm addObject:c2];
+    [realm commitWriteTransaction];
+     */
+
+    self.calendars = [Calendar allObjects];// sortedResultsUsingProperty:@"name" ascending:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,15 +64,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return self.calendars.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
-    cell.textLabel.text = @"Walk Mason";
-    
+
+    Calendar *cal = [self.calendars objectAtIndex:indexPath.row];
+    cell.textLabel.text = cal.name;
     return cell;
 }
 
@@ -106,14 +132,21 @@
      {
          textField.placeholder = @"Calendar Name";
      }];
+    NSLog(@"UI: %@", [Calendar allObjects]);
 
+    @weakify(self);
     UIAlertAction *okAction = [UIAlertAction
                                actionWithTitle:NSLocalizedString(@"OK", @"OK action")
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action)
                                {
                                    UITextField *nameField = alertController.textFields.firstObject;
-                                   NSLog(@"Entered:%@", nameField.text);
+                                   NSString *name = nameField.text;
+                                   NSLog(@"Entered:%@", name);
+                                   [Tracker addCalendar:name complete:^{
+                                       @strongify(self);
+                                       [self.tableView reloadData];
+                                   }];
                                }];
 
     UIAlertAction *cancelAction = [UIAlertAction
@@ -128,7 +161,7 @@
     [alertController addAction:okAction];
     [alertController addAction:cancelAction];
     [self presentViewController:alertController animated:YES completion:nil];
-
 }
+
 
 @end
